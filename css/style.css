@@ -1,0 +1,202 @@
+/* reset */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: unset;
+}
+
+:root{
+  font-family: Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #d9d9d9;
+}
+
+img{
+  vertical-align: top;
+}
+
+/* layout */
+
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.contents .flexBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foodCard .imgArea{
+  position: relative;
+}
+
+.foodCard .imgArea .cardDesc{
+  position: absolute;
+}
+
+.foodCard .goods{
+  display: flex;
+}
+
+
+/* component */
+
+header{
+  background-color: #fff;
+}
+
+header .container{
+  padding: 66px 0;
+  height: 100%;
+  background: url("../images/foods.png") no-repeat right center;
+  background-size: 124px 100px;
+}
+
+header .container h1{
+  color: #f60;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.contents .flexBox{
+  align-items: center;
+  border-radius: 12px;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contents .foodCard{
+  flex-basis: 300px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.foodCard .imgArea .cardDesc{
+  bottom: 0;
+  border-radius: 0px 12px 0px 0px;
+  background: rgba(0, 0, 0, 0.80);
+  padding: 10px 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.type_orange_highlight{
+  color: #f60;
+  font-weight: 700;
+}
+
+.type_green_highlight{
+  color: #17A651;
+  font-weight: 700;
+}
+
+.type_blue_highlight{
+  color: #0075FF;
+  font-weight: 700;
+}
+
+.foodCard .description{
+  padding: 20px;
+  background-color: #fff;
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.foodCard .goods{
+  padding: 26px 18px;
+  display: flex;
+  background-color: #f4f4f4;
+  gap: 9px;
+}
+
+.foodCard .goods div::before{
+  content: "#";
+  color: #ffffff55;
+  margin-right: 5px;
+}
+
+.foodCard .goods div{
+  border-radius: 12px;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 1.1rem;   /* 11px로 바꿈 */
+}
+
+.goods.type_orange div{
+  background-color: #f60;
+}
+
+.goods.type_green div{
+  background-color: #17A651;
+}
+
+.goods.type_blue div{
+  background-color: #0075FF;
+}
+
+footer{
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  color: #aaa;
+  font-size: 1.2rem;
+  padding: 26px 0;
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px) { 
+  .container{
+    width: 740px;
+  }
+
+  .contents .flexBox{
+    width: 740px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contents .flexBox .foodCard{
+    width: 48%;
+    margin-right: 2%;
+    display: inline-block;
+  }
+  .contents .flexBox .foodCard:nth-of-type(2){
+    margin-right: 0;
+  }
+  .contents .imgArea img{
+    width: 100%;
+    height: 100%;
+  }
+} 
+
+@media screen and (max-width:767px) {
+  .container{
+    width: 400px;
+  }
+
+  .contents .flexBox{
+    width: 400px;
+    flex-wrap: wrap;
+  }
+
+  .contents .flexBox .foodCard{
+    width: 100%;
+    display: inline-block;
+  }
+  .contents .imgArea img{
+    width: 100%;
+    height: 100%;
+  }
+  footer{
+    text-align: center;
+  }
+} 
